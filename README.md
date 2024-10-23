@@ -1,8 +1,8 @@
-Here’s a basic `README.md` for your **flutter_stores** package on pub.dev:
+Here’s a basic `README.md` for your **flutter_data_prefs** package on pub.dev:
 
 ---
 
-# flutter_stores
+# flutter_data_prefs
 
 A Flutter package for easily storing and updating user preferences. It simplifies key-value management and provides customizable preference widgets like switches and text fields to integrate into your Flutter apps.
 
@@ -18,7 +18,7 @@ Add the following to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_stores: latest_version
+  flutter_data_prefs: latest_version
 ```
 
 Then run `flutter pub get` in your terminal.
@@ -29,7 +29,7 @@ Then run `flutter pub get` in your terminal.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_stores/flutter_stores.dart';
+import 'package:flutter_data_prefs/flutter_data_prefs.dart';
 
 class PrefsScreen extends StatelessWidget {
   const PrefsScreen({super.key});
@@ -69,7 +69,7 @@ You can easily customize the layout using the `PreferencesLayout`:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:flutter_stores/flutter_stores.dart';
+import 'package:flutter_data_prefs/flutter_data_prefs.dart';
 
 class CustomPreferencesScreen extends StatelessWidget {
   const CustomPreferencesScreen({super.key});

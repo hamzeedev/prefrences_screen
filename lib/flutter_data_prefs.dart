@@ -1,8 +1,8 @@
-library flutter_stores;
+library flutter_data_prefs;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_stores/flutter_stores.dart';
-export 'package:flutter_stores/src/widgets/preferences.dart';
+import 'package:flutter_data_prefs/flutter_data_prefs.dart';
+export 'package:flutter_data_prefs/src/widgets/preferences.dart';
 
 class PreferencesLayout extends StatelessWidget {
   final List<Preferences> preferences;

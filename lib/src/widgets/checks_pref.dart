@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../flutter_stores.dart';
+import '../../flutter_data_prefs.dart';
 
 class ChecksPref<T> extends Preferences<T> {
   const ChecksPref({super.key, required super.title, required super.prefKey});

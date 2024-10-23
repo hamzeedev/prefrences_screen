@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_stores/flutter_stores.dart';
-import 'package:flutter_stores/src/utils/helper.dart';
-import 'package:flutter_stores/src/widgets/preferences.dart';
+import 'package:flutter_data_prefs/flutter_data_prefs.dart';
+import 'package:flutter_data_prefs/src/utils/helper.dart';
+import 'package:flutter_data_prefs/src/widgets/preferences.dart';
 
 class TextfieldPref<T> extends Preferences<T> {
   const TextfieldPref({

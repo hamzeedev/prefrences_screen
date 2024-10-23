@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_stores/src/utils/helper.dart';
-import '../../flutter_stores.dart';
+import 'package:flutter_data_prefs/src/utils/helper.dart';
+import '../../flutter_data_prefs.dart';
 
 class SwitchPref extends Preferences<bool> {
   const SwitchPref({
