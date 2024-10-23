@@ -1,7 +1,7 @@
 name: flutter_stores
-description: "A new Flutter project."
+description: "A simple solution for storing and updating user preferences in Flutter apps. Manage key-value pairs with ease for app settings and configurations."
 version: 0.0.1
-homepage:
+homepage: https://github.com/hamzeedev/prefrences_screen.git
 
 environment:
   sdk: ^3.5.3

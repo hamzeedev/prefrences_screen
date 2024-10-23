@@ -7,7 +7,7 @@ class SwitchPref extends Preferences<bool> {
     super.key,
     required super.title,
     required super.prefKey,
-     this.onChanged,
+    this.onChanged,
     this.defaultValue = false,
   });
 
@@ -16,11 +16,9 @@ class SwitchPref extends Preferences<bool> {
 
   @override
   State<Preferences<bool>> createState() => _SwitchPrefState();
-
 }
 
-class _SwitchPrefState extends State<SwitchPref>{
-
+class _SwitchPrefState extends State<SwitchPref> {
   late bool userValue;
 
   @override
@@ -28,12 +26,13 @@ class _SwitchPrefState extends State<SwitchPref>{
     userValue = PreferencesHelper.getValue(widget.prefKey, widget.defaultValue);
     super.initState();
   }
+
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return SwitchListTile(
       title: Text(widget.title),
       value: userValue,
-      onChanged: (value){
+      onChanged: (value) {
         userValue = value;
         PreferencesHelper.saveValue(widget.prefKey, value);
         setState(() {});

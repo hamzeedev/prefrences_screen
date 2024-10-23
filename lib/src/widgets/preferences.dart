@@ -7,14 +7,13 @@ export 'textfield_pref.dart';
 export 'package:flutter_stores/src/utils/pref_value.dart';
 
 abstract class Preferences<T> extends StatefulWidget {
-
   final String title;
   final String prefKey;
 
-   const Preferences({
-     super.key,
-     required this.title,
-     required this.prefKey,
+  const Preferences({
+    super.key,
+    required this.title,
+    required this.prefKey,
   });
 
   @override

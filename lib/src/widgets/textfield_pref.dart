@@ -21,46 +21,46 @@ class TextfieldPref<T> extends Preferences<T> {
   State<Preferences<T>> createState() => _TextfieldPrefState<T>();
 }
 
-class _TextfieldPrefState<T> extends State<TextfieldPref<T>>{
-
+class _TextfieldPrefState<T> extends State<TextfieldPref<T>> {
   String? oldValue;
 
   @override
-  Widget build(BuildContext context){
-
+  Widget build(BuildContext context) {
     oldValue = PreferencesHelper.instance.read<String>(widget.prefKey);
     var controller = TextEditingController(text: oldValue);
 
     return ListTile(
       title: Text(widget.title),
       subtitle: Text(oldValue ?? widget.emptySummary),
-      onTap: (){
-        showDialog(context: context, builder: (_)=>AlertDialog(
-          title: Text(widget.dialogTitle),
-          content: TextFormField(
-            controller: controller,
-            decoration: InputDecoration(
-              hintText: widget.dialogTitle,
-            ),
-          ),
-          actions: [
-            TextButton(
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-                child: const Text("Dismiss"),
-            ),
-            TextButton(
-              onPressed: (){
-                var newValue = controller.text;
-                PreferencesHelper.saveValue(widget.prefKey, newValue);
-                Navigator.pop(context);
-                setState(() {});
-              },
-              child:  Text( oldValue == null ? "Set" : "Update"),
-            ),
-          ],
-        ));
+      onTap: () {
+        showDialog(
+            context: context,
+            builder: (_) => AlertDialog(
+                  title: Text(widget.dialogTitle),
+                  content: TextFormField(
+                    controller: controller,
+                    decoration: InputDecoration(
+                      hintText: widget.dialogTitle,
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text("Dismiss"),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        var newValue = controller.text;
+                        PreferencesHelper.saveValue(widget.prefKey, newValue);
+                        Navigator.pop(context);
+                        setState(() {});
+                      },
+                      child: Text(oldValue == null ? "Set" : "Update"),
+                    ),
+                  ],
+                ));
       },
     );
   }
