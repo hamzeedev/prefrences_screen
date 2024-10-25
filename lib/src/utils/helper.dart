@@ -1,10 +1,11 @@
 import 'dart:developer';
-
 import 'package:get_storage/get_storage.dart';
 
 class PreferencesHelper {
+
   static const String _key = "preferences_screen_container";
   static GetStorage get instance => GetStorage(_key);
+  
   static const List<Type> allowedTypes = [num, bool, String, List, Map];
 
   static void saveValue(String key, dynamic value) {
@@ -28,4 +29,24 @@ class PreferencesHelper {
     }
     return false;
   }
+
+
+  final GetStorage _db = GetStorage();
+
+  void saveCheckBoxValues(String key, bool value) {
+    _db.write(key, value);
+  }
+
+  bool readCheckBoxValues(String key) {
+    return _db.read(key) ?? false;
+  }
+
+  void saveRadioValues(String key, String value) {
+    _db.write(key, value);
+  }
+
+  String? readRadioValues(String key) {
+    return _db.read(key);
+  }
 }
+

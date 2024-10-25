@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
 export 'checks_pref.dart';
-export 'options_pref.dart';
+export 'radio_pref.dart';
 export 'switch_pref.dart';
 export 'textfield_pref.dart';
 export 'package:flutter_data_prefs/src/utils/pref_value.dart';
